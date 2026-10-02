@@ -16,6 +16,10 @@ public class Application {
         // without adding the @Component - No qualifying bean of type 'com.divyansh.SpringBoot.Alien' available
         Alien obj = context.getBean(Alien.class);
         obj.code();
+
+        // Creating one more Alien object
+        Alien obj1 = context.getBean(Alien.class);
+        obj1.code();
 	}
 
 }
