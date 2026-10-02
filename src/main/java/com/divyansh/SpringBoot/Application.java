@@ -8,7 +8,9 @@ public class Application {
 
 	public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        System.out.println("Hello Spring Boot");
+        // We created this object manually
+        Alien obj = new Alien();
+        obj.code();
 	}
 
 }
