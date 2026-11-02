@@ -1,14 +1,18 @@
 package com.divyansh.SpringBoot.service;
 
+import com.divyansh.SpringBoot.repository.LaptopRepository;
 import com.divyansh.SpringBoot.model.Laptop;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LaptopService {
 
+    @Autowired
+    private LaptopRepository rep;
+
     public void addLaptop(Laptop lap) {
-        System.out.println("method called");
+        rep.save(lap);
     }
 
     public boolean isGoodForProgg(Laptop lap){
